@@ -8,9 +8,10 @@ struct complex {
     double Im;
 };
 
-void set(complex& z, double a = 0, double b = 0) {
+complex set(complex& z, double a = 0, double b = 0) {
     z.Re = a;
     z.Im = b;
+    return z;
 }
 
 double getRe(const complex& z) {
