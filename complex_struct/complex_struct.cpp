@@ -8,10 +8,9 @@ struct complex {
     double Im;
 };
 
-complex set(complex& z, double a = 0, double b = 0) {
+void set(complex& z, double a = 0, double b = 0) {
     z.Re = a;
     z.Im = b;
-    return z;
 }
 
 double getRe(const complex& z) {
@@ -32,7 +31,7 @@ complex sum(const complex& z1, const complex& z2) {
     return res;
 }
 
-complex add(complex& z1, const complex& z2)
+complex& add(complex& z1, const complex& z2)
 {
     z1.Re += z2.Re;
     z1.Im += z2.Im;
